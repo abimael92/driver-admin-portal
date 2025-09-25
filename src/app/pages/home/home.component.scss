@@ -1,25 +1,63 @@
+// colors, fonts
+$primary: #2563eb; // blue
+$secondary: #facc15; // yellow
+$font: "Inter", sans-serif;
+
 .home-container {
   text-align: center;
-  margin-top: 50px;
+  font-family: $font;
+  padding: 4rem 1rem;
 
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    color: $primary;
+    span {
+      color: $secondary;
+    }
+    animation: fadeInDown 1s ease forwards;
   }
 
   p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: 1.25rem;
+    color: #444;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.5s ease forwards;
   }
 
-  .buttons {
-    .btn {
-      padding: 10px 20px;
-      background-color: #4caf50;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 16px;
+  a.button {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: white;
+    background-color: $primary;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+      transform: translateY(-2px);
     }
+  }
+}
+
+// simple keyframe animations
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
