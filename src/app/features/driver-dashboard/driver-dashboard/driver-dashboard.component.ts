@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../../../core/auth.service';
 
 @Component({
   selector: 'app-driver-dashboard',
-  imports: [],
   templateUrl: './driver-dashboard.component.html',
-  styleUrl: './driver-dashboard.component.scss'
+  styleUrls: ['./driver-dashboard.component.scss'],
 })
 export class DriverDashboardComponent {
+  constructor(private auth: AuthService) {}
 
+  logout() {
+    this.auth.logout();
+  }
 }
