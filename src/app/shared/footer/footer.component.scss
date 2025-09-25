@@ -1,0 +1,37 @@
+.footer {
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 5rem;
+
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo-icon {
+      width: 24px;
+      height: 24px;
+      stroke: #2563eb;
+    }
+
+    .logo-text {
+      margin-left: 0.5rem;
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #111827;
+    }
+  }
+
+  .tagline {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+  }
+}
