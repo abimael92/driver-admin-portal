@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router'; // needed for routerLink
 
 @Component({
   selector: 'app-navbar',
-  standalone: true, // ✅ important
+  standalone: true,
+  imports: [RouterModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })

@@ -1,31 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { FeaturesComponent } from './components/features/features.component';
+import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
+import { CtaBannerComponent } from './components/cta-banner/cta-banner.component';
 
-export const routes: Routes = [
-  // ✅ add 'export' here
-  { path: '', component: HomeComponent },
-  {
-    path: 'login',
-    loadChildren: () =>
-      import('./features/login/login.module').then((m) => m.LoginModule),
-  },
-  {
-    path: 'driver',
-    loadChildren: () =>
-      import('./features/driver-dashboard/driver-dashboard.module').then(
-        (m) => m.DriverDashboardModule
-      ),
-  },
-  {
-    path: 'passenger',
-    loadChildren: () =>
-      import('./features/passenger-booking/passenger-booking.module').then(
-        (m) => m.PassengerBookingModule
-      ),
-  },
-  { path: '**', component: NotFoundComponent },
+const routes: Routes = [
+  { path: '', component: HeroComponent },
+  { path: 'search', component: FeaturesComponent },
+  { path: 'how-it-works', component: HowItWorksComponent },
+  { path: 'become-driver', component: CtaBannerComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
