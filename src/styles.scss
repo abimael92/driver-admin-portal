@@ -1,9 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+$blue: #2563eb;
+$blue-light: #3b82f6;
+$green: #16a34a;
+$gray: #f3f4f6;
+$white: #ffffff;
 
-/* Optional: custom global styles */
 body {
+  margin: 0;
   font-family: "Inter", sans-serif;
+  background-color: $white;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
