@@ -27,9 +27,18 @@
     margin-top: 2rem;
     border-top: 1px solid #374151;
     padding-top: 1rem;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    text-align: center;
     font-size: 0.875rem;
+  }
+
+  .whatsapp {
+    background: #16a34a;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    color: #fff;
   }
 }
