@@ -1,0 +1,150 @@
+/* Example: Hero overlay gradient */
+section.relative {
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section {
+  position: relative;
+  background-image: url("https://readdy.ai/api/search-image?query=Beautiful%20landscape%20view%20of%20Chihuahua%20to%20Ciudad%20Juarez%20highway%20route%2C%20mountains%20in%20background%2C%20modern%20transportation%20infrastructure%2C%20aerial%20view%20of%20desert%20highway%20connecting%20two%20cities&width=1920&height=800&seq=about-hero&orientation=landscape");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem 1rem;
+  color: #fff;
+  text-align: center;
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); // semi-transparent overlay
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+
+      @media (min-width: 768px) {
+        font-size: 4rem;
+      }
+    }
+
+    p {
+      font-size: 1.25rem;
+
+      @media (min-width: 768px) {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+.mission-section {
+  padding: 5rem 1rem;
+  background-color: #f9fafb;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .mission-text {
+    h2 {
+      font-size: 2.25rem;
+      font-weight: bold;
+      color: #111827;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.125rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+      }
+
+      .feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+
+        .icon {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 0.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.25rem;
+
+          &.blue {
+            background-color: #dbeafe;
+            color: #2563eb;
+          }
+          &.green {
+            background-color: #d1fae5;
+            color: #059669;
+          }
+          &.purple {
+            background-color: #ede9fe;
+            color: #7c3aed;
+          }
+          &.orange {
+            background-color: #ffedd5;
+            color: #f97316;
+          }
+        }
+
+        h3 {
+          font-weight: 600;
+          color: #111827;
+          margin-bottom: 0.25rem;
+        }
+
+        p {
+          font-size: 0.875rem;
+          color: #4b5563;
+        }
+      }
+    }
+  }
+
+  .mission-image {
+    img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+    }
+  }
+}
